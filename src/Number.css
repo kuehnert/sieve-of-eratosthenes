@@ -1,0 +1,49 @@
+.Number {
+  font-size: 0.7rem;
+  display: inline-block;
+  min-width: 26px;
+  margin: 2px;
+  padding: 2px;
+  color: white;
+  text-align: center;
+}
+
+.Number.prime {
+  background: green;
+}
+
+.Number.shaded {
+  background: brown;
+  animation-name: deselect;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.Number.hidden {
+  background: #222;
+  animation-name: hide;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes deselect {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: brown;
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    visibility: visible;
+    background-color: green;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    background-color: #222;
+  }
+}
